@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>SamSke Studio Suite</title>
+    <link rel="stylesheet" href="/upload.css" />
+    <link rel="stylesheet" href="/common.css" />
+  </head>
+  <body>
+    <div id="topbarMount"></div>
+    <div class="page-banner"><div id="announcementBar" class="announcement-bar hidden"></div></div>
+
+    <main class="page-shell wide">
+      <section class="hero-card" style="margin-top:18px;">
+        <div>
+          <div class="eyebrow" data-i18n="home.eyebrow"></div>
+          <h1 data-i18n="home.title"></h1>
+          <p class="intro" data-i18n="home.subtitle"></p>
+        </div>
+        <div class="stats-grid">
+          <article class="stat-card"><span>Pages</span><strong>4</strong></article>
+          <article class="stat-card"><span>Mode</span><strong>No API</strong></article>
+        </div>
+      </section>
+
+      <section class="grid-cards" style="margin-top:18px;">
+        <article class="info-card"><div class="eyebrow">01</div><h3 data-i18n="home.card1.title"></h3><p data-i18n="home.card1.text"></p></article>
+        <article class="info-card"><div class="eyebrow">02</div><h3 data-i18n="home.card2.title"></h3><p data-i18n="home.card2.text"></p></article>
+        <article class="info-card"><div class="eyebrow">03</div><h3 data-i18n="home.card3.title"></h3><p data-i18n="home.card3.text"></p></article>
+      </section>
+
+      <section class="translator-panel" style="margin-top:18px;">
+        <div class="card-kicker">Utility</div>
+        <h2 data-i18n="translator.title"></h2>
+        <p class="muted" data-i18n="translator.subtitle"></p>
+        <div class="translator-grid" style="margin-top:16px;">
+          <div class="translator-box">
+            <label id="translatorFrom"></label>
+            <textarea id="translatorInput" placeholder="Typ hier..."></textarea>
+          </div>
+          <div class="translator-actions"><button id="swapTranslateBtn" type="button" data-i18n="translator.swap"></button></div>
+          <div class="translator-box">
+            <label id="translatorTo" data-i18n="translator.output"></label>
+            <textarea id="translatorOutput" readonly></textarea>
+          </div>
+        </div>
+        <div class="small-note" data-i18n="translator.note"></div>
+      </section>
+    </main>
+
+    <footer class="page-footer" data-i18n="footer.credit"></footer>
+    <script src="/common.js"></script>
+  </body>
+</html>

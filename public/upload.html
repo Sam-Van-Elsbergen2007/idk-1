@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Send to Stream</title>
     <link rel="stylesheet" href="/upload.css" />
+    <link rel="stylesheet" href="/common.css" />
   </head>
   <body>
-    <div id="announcementBar" class="announcement-bar hidden"></div>
+    <div id="topbarMount"></div>
+    <div class="page-banner"><div id="announcementBar" class="announcement-bar hidden"></div></div>
 
     <main class="page-shell">
-      <section class="hero-card">
+      <section class="hero-card" style="margin-top:18px;">
         <div>
           <div class="eyebrow">Community upload portal</div>
           <h1>Stuur iets in voor de stream</h1>
@@ -66,10 +68,29 @@
         </article>
       </section>
 
+      <section class="translator-panel" style="margin-top:18px;">
+        <div class="card-kicker">Utility</div>
+        <h2 data-i18n="translator.title"></h2>
+        <p class="muted" data-i18n="translator.subtitle"></p>
+        <div class="translator-grid" style="margin-top:16px;">
+          <div class="translator-box">
+            <label id="translatorFrom"></label>
+            <textarea id="translatorInput" placeholder="Typ hier..."></textarea>
+          </div>
+          <div class="translator-actions"><button id="swapTranslateBtn" type="button" data-i18n="translator.swap"></button></div>
+          <div class="translator-box">
+            <label id="translatorTo" data-i18n="translator.output"></label>
+            <textarea id="translatorOutput" readonly></textarea>
+          </div>
+        </div>
+        <div class="small-note" data-i18n="translator.note"></div>
+      </section>
+
       <p class="hint">Gebruik je een speciale link met <code>?k=...</code>, laat die parameter dan gewoon staan.</p>
     </main>
 
-    <footer class="site-footer">made with ❤️ by samske</footer>
+    <footer class="page-footer" data-i18n="footer.credit"></footer>
+    <script src="/common.js"></script>
     <script src="/upload.js"></script>
   </body>
 </html>

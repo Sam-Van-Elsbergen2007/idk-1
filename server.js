@@ -507,7 +507,7 @@ const server = http.createServer(async (req, res) => {
     }
 
     if (req.method === 'GET') {
-      const p = u.pathname === '/' ? '/overlay.html' : u.pathname;
+      const p = u.pathname === '/' ? '/home.html' : u.pathname;
       const fp = safeJoin(CFG.publicDir, p);
       if (!fp) return notFound(res);
       return fs.readFile(fp, (err, data) => {

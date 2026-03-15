@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>SamSke Studio Control</title>
     <link rel="stylesheet" href="/dashboard.css" />
+    <link rel="stylesheet" href="/common.css" />
   </head>
   <body>
-    <div id="announcementBar" class="announcement-bar hidden"></div>
+    <div id="topbarMount"></div>
+    <div class="page-banner"><div id="announcementBar" class="announcement-bar hidden"></div></div>
 
     <header class="shell-header">
       <div>
@@ -53,7 +55,7 @@
               <div class="panel-kicker">Site-wide banner</div>
               <h2>Announcement</h2>
             </div>
-            <span class="badge neutral">zichtbaar op dashboard + upload</span>
+            <span class="badge neutral">zichtbaar op dashboard + upload + home + changelog</span>
           </div>
           <div class="announcement-composer">
             <input id="notifyText" maxlength="180" placeholder="Bijv. Uploads duren iets langer door drukte" />
@@ -99,11 +101,35 @@
           <div id="historyList" class="list compact"></div>
           <div id="emptyHistory" class="empty">Nog geen geschiedenis beschikbaar.</div>
         </article>
+
+        <article class="panel span-12">
+          <div class="panel-head">
+            <div>
+              <div class="panel-kicker">Utility</div>
+              <h2 data-i18n="translator.title"></h2>
+            </div>
+            <span class="badge neutral">NL ↔ EN</span>
+          </div>
+          <p class="helper" data-i18n="translator.subtitle"></p>
+          <div class="translator-grid" style="margin-top:16px;">
+            <div class="translator-box">
+              <label id="translatorFrom"></label>
+              <textarea id="translatorInput" placeholder="Typ hier..."></textarea>
+            </div>
+            <div class="translator-actions"><button id="swapTranslateBtn" type="button" data-i18n="translator.swap"></button></div>
+            <div class="translator-box">
+              <label id="translatorTo" data-i18n="translator.output"></label>
+              <textarea id="translatorOutput" readonly></textarea>
+            </div>
+          </div>
+          <div class="helper" data-i18n="translator.note"></div>
+        </article>
       </section>
     </main>
 
-    <footer class="site-footer">made with ❤️ by samske</footer>
+    <footer class="page-footer" data-i18n="footer.credit"></footer>
     <div id="toastWrap" class="toast-wrap"></div>
+    <script src="/common.js"></script>
     <script src="/dashboard.js"></script>
   </body>
 </html>

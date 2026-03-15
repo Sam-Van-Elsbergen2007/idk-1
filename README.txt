@@ -70,3 +70,9 @@ Defaults:
 
 Run locally or on Render:
 node server.js
+
+
+Extra routes:
+- Home: /home.html
+- Changelog: /changelog.html
+- Donate: https://buymeacoffee.com/gamingpcsam
